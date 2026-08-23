@@ -21,8 +21,15 @@
 
 .logo {
     width: 250px;
+
 }
 
+.destaque {
+    color: #F97316;
+    font-weight: 800;
+    text-shadow: 0 0 20px rgba(249, 115, 22, 0.1);
+
+}
 
 body {
     background-color: #000000;
@@ -38,11 +45,12 @@ body {
 }
 
 .span {
+    background-color: rgba(255, 255, 255, 0.1);
+    align-items: center;
     margin-top: 2px;
     color: rgba(255, 255, 255, 0.7); /* Texto branco com 70% de opacidade */
     display: flex;
     padding: 15px;
-    background-color: rgba(226, 232, 240, 0.1); /* Cinza bem claro com 70% de opacidade */    align-items: center;
     justify-content: center;
     border-radius: 50px;
     height: 25px;
@@ -283,6 +291,52 @@ body {
     font-size: 1.15rem;
     color: #FFFFFF;
 }
+
+/* Ajustes para tablets e telas compactas. As regras de desktop permanecem intactas. */
+@media (max-width: 1024px) {
+    .hero-section, .problem-section, .benefits-section { width: 100%; }
+    .hero-section { min-height: 100svh; height: auto; padding: 72px 32px; }
+    .title { width: min(720px, 100%); font-size: clamp(2rem, 4.5vw, 2.5rem); line-height: 1.35; }
+    .subtitle, .title-problems, .alert-box, .list { width: min(700px, 100%); }
+    .subtitle { padding: 0 12px; }
+    .problem-section, .benefits-section { min-height: auto; padding: 72px 32px; }
+}
+
+@media (max-width: 767px) {
+    body { overflow-x: hidden; }
+    .cursor-glow { display: none; }
+    .services-section, .process-section, .final-cta-section { width: 100%; padding: 56px 20px; }
+    .services-section h2, .process-section h2, .final-cta-section h2 { font-size: clamp(1.6rem, 7vw, 2rem); line-height: 1.3; }
+    .services-section h3, .services-section li, .process-section li, .final-cta-section p { line-height: 1.55; }
+    .services-section ul, .process-section ol { padding-left: 20px; }
+    .hero-section { gap: 22px; padding: 48px 20px; }
+    .logo { width: min(210px, 65vw); }
+    .span { padding: 12px 16px; font-size: 0.72rem; white-space: nowrap; }
+    .title { padding: 0; font-size: clamp(1.85rem, 8vw, 2.35rem); line-height: 1.25; }
+    .subtitle { padding: 0; font-size: 1rem; line-height: 1.55; }
+    .cta-wrapper { width: 100%; height: auto; }
+    .btn { width: 100%; max-width: 360px; padding: 14px 18px; font-size: 1rem; text-align: center; }
+    .problem-section, .benefits-section { gap: 20px; padding: 56px 20px; }
+    .title-problems { font-size: clamp(1.6rem, 7vw, 2rem); line-height: 1.3; }
+    .title-problems br { display: none; }
+    .alert-box { align-items: flex-start; padding: 14px; }
+    .alert-box svg { flex: 0 0 26px; width: 26px; height: 26px; margin-top: 2px; }
+    .alert-text { margin-bottom: 0; font-size: 0.94rem; line-height: 1.45; }
+    .list { gap: 10px; }
+    .list-item, .list-item.benefits { align-items: flex-start; padding: 16px; gap: 10px; font-size: 0.94rem; line-height: 1.5; }
+    .list-item.benefits::before { display: none; }
+    .benefit-icon { width: 30px; height: 30px; flex: 0 0 30px; }
+    .list-item.benefits strong { font-size: 1rem; }
+    .list-item:hover, .list-item.benefits:hover { transform: none; }
+}
+
+@media (max-width: 374px) {
+    .hero-section { padding-inline: 16px; }
+    .problem-section, .benefits-section { padding-inline: 16px; }
+    .span { font-size: 0.65rem; }
+}
+
+@media (hover: none) { .cursor-glow { display: none; } }
 
 .list-item.benefits::before {
     content: '';
