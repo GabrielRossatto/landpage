@@ -19,6 +19,11 @@
     will-change: transform;
 }
 
+.logo {
+    width: 250px;
+}
+
+
 body {
     background-color: #000000;
     background-image: 
@@ -33,6 +38,7 @@ body {
 }
 
 .span {
+    margin-top: 2px;
     color: rgba(255, 255, 255, 0.7); /* Texto branco com 70% de opacidade */
     display: flex;
     padding: 10px;
@@ -235,19 +241,7 @@ body {
     transform: scale(1.05);
 }
 
-.list-item::before {
-    content: '';
-    position: absolute;
-    top: var(--mouse-y, 50%);
-    left: var(--mouse-x, 50%);
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
+
 
 .list-item:hover::before {
     opacity: 1;
