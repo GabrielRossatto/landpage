@@ -159,8 +159,8 @@ body {
 .list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-
+    gap: 20px;
+    
     max-width: 700px;
   
     width: 100%;
@@ -171,6 +171,7 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+    height: 70px;
     padding: 14px 18px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255,255,255,0.05);
@@ -187,13 +188,7 @@ body {
 }
 
 
-.list-item::before {
-    content: '✕';
-    color: #FF6B35;
-    font-weight: 700;
-    font-size: 1.1rem;
-    flex-shrink: 0;
-}
+
 .fade-section {
     opacity: 0;
     transform: translateY(20px);
@@ -233,10 +228,12 @@ body {
 
 .list-item.benefits { 
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    min-height: 0;
     padding: 24px 28px;
-    gap: 16px;
+    gap: 12px;
     color: #94A3B8;
     font-size: 0.95rem;
     line-height: 1.6;
@@ -244,6 +241,32 @@ body {
     overflow: hidden;
     transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
+
+.benefit-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.benefit-heading .benefit-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.list-item.benefits::before {
+    display: none;
+}
+
+.benefit-description {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+
 
 .list-item.benefits::hover{
     transform: scale(1.05);
@@ -325,7 +348,7 @@ body {
     .list { gap: 10px; }
     .list-item, .list-item.benefits { align-items: flex-start; padding: 16px; gap: 10px; font-size: 0.94rem; line-height: 1.5; }
     .list-item.benefits::before { display: none; }
-    .benefit-icon { width: 30px; height: 30px; flex: 0 0 30px; }
+    .benefit-heading .benefit-icon { width: 30px; height: 30px; flex: 0 0 30px; }
     .list-item.benefits strong { font-size: 1rem; }
     .list-item:hover, .list-item.benefits:hover { transform: none; }
 }
