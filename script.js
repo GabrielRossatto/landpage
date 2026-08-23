@@ -20,3 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 });
+
+    const items = document.querySelectorAll('.list-item.benefits');
+
+    items.forEach((item, index) => {
+        item.style.transitionDelay = `${index * 0.1}s`;
+    });
+
+    const glow = document.querySelector('.cursor-glow');
+
+document.addEventListener('mousemove', (e) => {
+    glow.style.left = `${e.clientX}px`;
+    glow.style.top = `${e.clientY}px`;
+});
