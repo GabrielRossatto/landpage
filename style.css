@@ -412,10 +412,58 @@ body {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 50vh;
+    min-height: 50vh;
+    padding: 80px 24px;
     gap: 30px;
+    text-align: center;
+    background: radial-gradient(circle at 50% 100%, rgba(249, 115, 22, 0.16), transparent 55%);
 }
 
+.site-footer {
+    width: 100%;
+    padding: 56px max(24px, calc((100vw - 1120px) / 2)) 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: #070707;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding-bottom: 48px;
+}
+
+.footer-brand { max-width: 460px; }
+.footer-logo { display: block; width: 150px; margin-bottom: 18px; }
+.footer-brand p { color: #94A3B8; line-height: 1.65; }
+
+.footer-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 18px;
+    border: 1px solid rgba(249, 115, 22, 0.55);
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-contact:hover { background: #F97316; transform: translateY(-2px); }
+.footer-contact span { color: #F97316; font-size: 1.2rem; transition: color 0.2s ease; }
+.footer-contact:hover span { color: #FFFFFF; }
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #64748B;
+    font-size: 0.78rem;
+}
 
 
 
@@ -443,6 +491,11 @@ body {
     body { overflow-x: hidden; }
     .cursor-glow { display: none; }
     .services-section, .process-section, .final-cta-section { width: 100%; padding: 56px 20px; }
+    .site-footer { padding: 42px 20px 22px; }
+    .footer-content, .footer-bottom { align-items: flex-start; flex-direction: column; }
+    .footer-content { gap: 28px; padding-bottom: 32px; }
+    .footer-bottom { gap: 8px; }
+    .footer-contact { width: 100%; justify-content: center; }
     .services-section h2, .process-section h2, .final-cta-section h2 { font-size: clamp(1.6rem, 7vw, 2rem); line-height: 1.3; }
     .services-section h3, .services-section li, .process-section li, .final-cta-section p { line-height: 1.55; }
     .services-section ul, .process-section ol { padding-left: 20px; }
