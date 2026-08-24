@@ -1,81 +1,51 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('.fade-section');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.15
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
+if (!reduceMotion) {
+    const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+                currentObserver.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.15 });
 
-    sections.forEach(section => {
-        observer.observe(section);
+    document.querySelectorAll('.fade-section').forEach((section) => observer.observe(section));
+}
+
+const glow = document.querySelector('.cursor-glow');
+
+if (glow && window.matchMedia('(hover: hover)').matches) {
+    document.addEventListener('pointermove', ({ clientX, clientY }) => {
+        glow.style.left = `${clientX}px`;
+        glow.style.top = `${clientY}px`;
     });
-});
-
-    const items = document.querySelectorAll('.list-item.benefits');
-
-    items.forEach((item, index) => {
-        item.style.transitionDelay = `${index * 0.1}s`;
-    });
-
-    const glow = document.querySelector('.cursor-glow');
-
-document.addEventListener('mousemove', (e) => {
-    glow.style.left = `${e.clientX}px`;
-    glow.style.top = `${e.clientY}px`;
-});
+}
 
 document.querySelectorAll('.reviews-track').forEach((track) => {
-    const cards = [...track.querySelectorAll('.review-card')];
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (!cards.length || reduceMotion) return;
+    if (reduceMotion) return;
 
     let paused = false;
-    let lastFrame = null;
     let position = 0;
-    const speed = 28; // pixels por segundo
+    let previousTime = 0;
+    const speed = 28;
     const maxScroll = () => Math.max(0, track.scrollWidth - track.clientWidth);
 
-    const pause = () => { paused = true; };
-    const play = () => { paused = false; };
+    ['mouseenter', 'focusin'].forEach((event) => track.addEventListener(event, () => { paused = true; }));
+    ['mouseleave', 'focusout'].forEach((event) => track.addEventListener(event, () => { paused = false; }));
 
-    track.addEventListener('mouseenter', pause);
-    track.addEventListener('mouseleave', play);
-    track.addEventListener('focusin', pause);
-    track.addEventListener('focusout', play);
+    const animate = (time) => {
+        const limit = maxScroll();
 
-    const move = (time) => {
-        if (lastFrame !== null && !paused) {
-            const limit = maxScroll();
-
-            if (limit > 0) {
-                position += speed * ((time - lastFrame) / 1000);
-
-                if (position >= limit) {
-                    position = 0;
-                }
-
-                track.scrollLeft = position;
-            }
+        if (previousTime && !paused && limit) {
+            position = (position + speed * (time - previousTime) / 1000) % limit;
+            track.scrollLeft = position;
         }
 
-        lastFrame = time;
-        requestAnimationFrame(move);
+        previousTime = time;
+        requestAnimationFrame(animate);
     };
 
-    window.addEventListener('resize', () => {
-        position = Math.min(position, maxScroll());
-    });
-
-    requestAnimationFrame(move);
+    window.addEventListener('resize', () => { position = Math.min(position, maxScroll()); });
+    requestAnimationFrame(animate);
 });
