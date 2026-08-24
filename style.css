@@ -98,7 +98,7 @@ body {
 .btn {
     background-color: #F97316;
     text-decoration: none;
-    padding: 10px;
+    padding: 15px;
     font-weight: 600;
     border-radius: 8px;
     font-size: 20px;
@@ -314,6 +314,120 @@ body {
     font-size: 1.15rem;
     color: #FFFFFF;
 }
+
+.services-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 100px max(24px, calc((100vw - 1120px) / 2));
+    gap: 38px;
+    overflow: hidden;
+}
+
+.reviews-heading {
+    align-self: center;
+    max-width: 620px;
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #F97316;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.reviews-heading h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; }
+.reviews-heading p { margin-top: 14px; color: #94A3B8; line-height: 1.6; }
+
+.reviews-track {
+    display: flex;
+    gap: 24px;
+    width: calc(100% + max(0px, (100vw - 1120px) / 2));
+    padding: 4px max(24px, calc((100vw - 1120px) / 2)) 20px 2px;
+    margin-right: calc(-1 * max(24px, calc((100vw - 1120px) / 2)));
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-behavior: auto;
+    touch-action: pan-x;
+    scrollbar-color: rgba(249, 115, 22, 0.7) rgba(255, 255, 255, 0.08);
+    scrollbar-width: thin;
+}
+
+.reviews-track::-webkit-scrollbar { height: 7px; }
+.reviews-track::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.08); border-radius: 99px; }
+.reviews-track::-webkit-scrollbar-thumb { background: rgba(249, 115, 22, 0.7); border-radius: 99px; }
+
+.review-card {
+    display: flex;
+    flex: 0 0 min(480px, 82vw);
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.review-card:hover { transform: translateY(-5px); border-color: rgba(249, 115, 22, 0.5); }
+.project-preview {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: #111118;
+    overflow: hidden;
+}
+
+.project-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.5s ease;
+}
+
+.review-card:hover .project-preview img { transform: scale(1.035); }
+
+.review-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 36px 32px;
+}
+
+.review-stars { color: #F97316; font-size: 0.9rem; letter-spacing: 0.1em; }
+.review-content blockquote { margin: 18px 0; color: #F8FAFC; font-size: 1.08rem; line-height: 1.65; }
+.review-author { color: #94A3B8; font-size: 0.88rem; font-weight: 600; }
+
+
+.final-cta-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+    gap: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Ajustes para tablets e telas compactas. As regras de desktop permanecem intactas. */
 @media (max-width: 1024px) {
