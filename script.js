@@ -14,6 +14,24 @@ function initFadeIn() {
     document.querySelectorAll('.fade-section').forEach((section) => observer.observe(section));
 }
 
+// Abre e fecha o menu hambúrguer em telas menores.
+function initNavMenu() {
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.getElementById('nav-links');
+    if (!toggle || !links) return;
+
+    const setOpen = (open) => {
+        links.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', open);
+        toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    };
+
+    toggle.addEventListener('click', () => setOpen(!links.classList.contains('open')));
+    links.addEventListener('click', ({ target }) => { if (target.closest('a')) setOpen(false); });
+    document.addEventListener('keydown', ({ key }) => { if (key === 'Escape') setOpen(false); });
+    document.addEventListener('click', ({ target }) => { if (!target.closest('.hero-nav')) setOpen(false); });
+}
+
 // Brilho que acompanha o cursor.
 function initCursorGlow() {
     const glow = document.querySelector('.cursor-glow');
@@ -127,6 +145,7 @@ function initReviewsAutoScroll() {
     });
 }
 
+initNavMenu();
 initHeroConnector();
 
 if (canHover) initCursorGlow();
