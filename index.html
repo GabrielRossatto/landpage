@@ -11,73 +11,257 @@
     <div class="cursor-glow" aria-hidden="true"></div>
 
     <header class="hero-section fade-section">
-        <img class="logo" src="basedev-logo-white-orange-v2.png" alt="Basedev">
-        <span class="hero-badge">PROPOSTA EXCLUSIVA</span>
-        <h1>Transforme visitantes em clientes com um <span class="destaque">site profissional</span> e de <span class="destaque">alta conversão</span></h1>
-        <p>Desenvolvo sites e landing pages sob medida, rápidos e otimizados para destacar sua marca e fechar mais negócios.</p>
-        <a href="https://wa.me/11914849538" target="_blank" rel="noopener" class="btn">Quero Mais Informações</a>
+        <nav class="hero-nav" aria-label="Principal">
+            <a href="#" class="nav-logo"><img src="basedev-logo-white-orange-v2.png" alt="Basedev"></a>
+            <ul>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-art hero-art-left" aria-hidden="true">
+            <div class="art-code">
+                <span style="--w: 55%"></span><span style="--w: 80%"></span><span style="--w: 40%"></span><span style="--w: 70%"></span>
+                <span style="--w: 30%"></span><span style="--w: 85%"></span><span style="--w: 60%"></span><span style="--w: 45%"></span>
+                <span style="--w: 75%"></span><span style="--w: 35%"></span><span style="--w: 65%"></span><span style="--w: 50%"></span>
+                <span style="--w: 80%"></span><span style="--w: 40%"></span>
+            </div>
+            <div class="art-card art-browser">
+                <div class="art-dots"><i></i><i></i><i></i></div>
+                <div class="art-lines art-lines-row"><i style="--w: 30%"></i><i style="--w: 15%"></i><i style="--w: 15%"></i></div>
+                <svg class="art-wireframe" viewBox="0 0 100 40" preserveAspectRatio="none"><rect x="1" y="1" width="98" height="38" rx="2"/><line x1="1" y1="1" x2="99" y2="39"/><line x1="99" y1="1" x2="1" y2="39"/></svg>
+                <div class="art-tiles"><i class="active"></i><i></i><i></i></div>
+            </div>
+            <div class="art-card art-bars" style="--d: 1.2s">
+                <div class="art-bars-chart"><i style="--h: 30%"></i><i style="--h: 50%"></i><i style="--h: 70%"></i><i style="--h: 100%"></i></div>
+            </div>
+            <div class="art-card art-profile" style="--d: 0.6s">
+                <span class="art-avatar"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>
+                <div class="art-lines"><i style="--w: 80%"></i><i style="--w: 60%"></i><i style="--w: 70%"></i></div>
+            </div>
+            <div class="art-card art-stat" style="--d: 1.8s">
+                <small>Taxa de conversão</small>
+                <strong>+55%</strong>
+            </div>
+            <div class="art-card art-trend" style="--d: 0.9s">
+                <svg viewBox="0 0 60 30"><polyline points="4 26 20 16 30 20 54 4"/><polyline points="44 4 54 4 54 13"/></svg>
+            </div>
+        </div>
+
+        <div class="hero-art hero-art-right" aria-hidden="true">
+            <svg class="art-network" viewBox="0 0 320 120"><polyline points="10 60 90 20 170 40 250 10 300 50"/><polyline points="90 20 130 90 170 40"/><polyline points="250 10 220 80"/><circle cx="10" cy="60" r="3" class="orange"/><circle cx="90" cy="20" r="2.5"/><circle cx="170" cy="40" r="3" class="purple"/><circle cx="250" cy="10" r="2.5"/><circle cx="300" cy="50" r="3" class="orange"/><circle cx="130" cy="90" r="2"/></svg>
+            <svg class="art-rocket" viewBox="0 0 64 64"><path class="rocket-flame" d="M24 46c-4 4-6 12-6 12s8-2 12-6"/><path class="rocket-body" d="M44 8c8 0 12 4 12 12 0 10-10 20-20 26l-8-8-8-8C26 18 34 8 44 8Z"/><circle class="rocket-window" cx="42" cy="22" r="5"/><path class="rocket-fin" d="M20 30l-8 2-4 8 12-2M34 44l-2 8-8 4 2-12"/></svg>
+            <div class="art-card art-dash" style="--d: 0.4s">
+                <div class="art-dash-side"><b></b><i></i><i></i><i></i><i></i></div>
+                <div class="art-dash-main">
+                    <div class="art-dash-panel">
+                        <span class="art-dash-thumb"></span>
+                        <div class="art-lines"><i style="--w: 90%"></i><i style="--w: 60%"></i><i style="--w: 75%"></i></div>
+                    </div>
+                    <div class="art-lines art-dash-list"><i style="--w: 70%"></i><i style="--w: 50%"></i><i style="--w: 80%"></i><i style="--w: 40%"></i></div>
+                </div>
+                <div class="art-dash-aside">
+                    <div class="art-mini"><div class="art-lines"><i class="orange" style="--w: 70%"></i><i style="--w: 50%"></i></div><b>+55%</b></div>
+                    <div class="art-mini art-area">
+                        <svg viewBox="0 0 100 40" preserveAspectRatio="none"><path class="area-fill" d="M0 32 20 22 35 26 55 12 75 18 100 4V40H0Z"/><polyline points="0 32 20 22 35 26 55 12 75 18 100 4"/></svg>
+                        <small>Desenvolvedores</small>
+                        <div class="art-team"><i></i><i></i><i></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="art-card art-project">
+                <small>Projeto</small>
+                <div class="art-progress"><i></i><i></i><i></i></div>
+                <div class="art-progress-labels"><span>Alinhamento</span><span>Desenvolvimento</span><span>Lançamento</span></div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <span class="hero-badge">PROPOSTA EXCLUSIVA</span>
+            <h1>Transforme visitantes em clientes com um <span class="destaque">site profissional</span> e de <span class="destaque">alta conversão</span></h1>
+            <p>Desenvolvo sites e landing pages sob medida, rápidos e otimizados para destacar sua marca e fechar mais negócios.</p>
+            <a href="https://wa.me/11914849538" target="_blank" rel="noopener" class="btn">Quero Criar Meu Site Agora</a>
+        </div>
+
+        <svg class="hero-connector" aria-hidden="true"><path/><polyline/><circle r="3.5"/></svg>
     </header>
 
     <main>
-        <section class="content-section problem-section fade-section">
-            <h2>Seu negócio está perdendo vendas por falta de uma <span class="destaque">presença digital forte?</span></h2>
-            <div class="alert-box">
-                <svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                <p>53% dos usuários abandonam um site que demora mais de 3 segundos para carregar.</p>
+        <section class="problem-section fade-section" aria-labelledby="problem-title">
+            <div class="section-heading">
+                <span class="eyebrow">O PROBLEMA</span>
+                <h2 id="problem-title">Seu negócio está perdendo vendas por falta de uma <span class="destaque">presença digital forte?</span></h2>
             </div>
-            <ul class="feature-list">
-                <li><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Site lento que ninguém tem paciência de esperar carregar</li>
-                <li><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Visual desatualizado que passa insegurança</li>
-                <li><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>Cliente pesquisa no Google e não te encontra</li>
+            <div class="problem-grid">
+                <div class="stat-card tilt">
+                    <div class="stat-bar" aria-hidden="true"><span class="art-dots"><i></i><i></i><i></i></span><span class="stat-url"></span></div>
+                    <div class="stat-body">
+                        <span class="stat-spinner" aria-hidden="true"></span>
+                        <strong class="stat-number">53%</strong>
+                        <p>dos usuários abandonam um site que demora mais de <b>3 segundos</b> para carregar.</p>
+                        <div class="stat-progress" aria-hidden="true"><i></i></div>
+                        <small aria-hidden="true">Carregando… 3,2s</small>
+                    </div>
+                </div>
+                <ul class="pain-list">
+                    <li class="pain-card tilt"><span class="pain-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><p>Site lento que ninguém tem paciência de esperar carregar</p></li>
+                    <li class="pain-card tilt"><span class="pain-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span><p>Visual desatualizado que passa insegurança</p></li>
+                    <li class="pain-card tilt"><span class="pain-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg></span><p>Cliente pesquisa no Google e não te encontra</p></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="servicos" class="benefits-section fade-section" aria-labelledby="benefits-title">
+            <div class="section-heading">
+                <span class="eyebrow">A SOLUÇÃO</span>
+                <h2 id="benefits-title">O que separa um site qualquer de um <span class="destaque">site que vende</span></h2>
+            </div>
+            <ul class="benefit-grid">
+                <li class="benefit-card tilt accent-orange">
+                    <span class="benefit-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5Z"/></svg></span>
+                    <h3>Foco total em conversão</h3>
+                    <p>Cada botão leva o visitante direto para a conversa com você — sem enrolação.</p>
+                </li>
+                <li class="benefit-card tilt accent-purple">
+                    <span class="benefit-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+                    <h3>Carregamento ultra-rápido</h3>
+                    <p>Cliente não espera site lento. Cada segundo a menos é uma venda a mais.</p>
+                </li>
+                <li class="benefit-card tilt accent-green">
+                    <span class="benefit-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z"/></svg></span>
+                    <h3>Design exclusivo e moderno</h3>
+                    <p>Visual que gera confiança à primeira vista, antes mesmo do cliente ler uma linha.</p>
+                </li>
             </ul>
         </section>
 
-        <section class="content-section benefits-section fade-section">
-            <h2>O que separa um site qualquer de um <span class="destaque">site que vende</span></h2>
-            <ul class="feature-list benefit-list">
-                <li><div><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5Z"/></svg><strong>Foco total em conversão</strong></div><p>Cada botão leva o visitante direto para a conversa com você — sem enrolação.</p></li>
-                <li><div><svg aria-hidden="true" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><strong>Carregamento ultra-rápido</strong></div><p>Cliente não espera site lento. Cada segundo a menos é uma venda a mais.</p></li>
-                <li><div><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z"/></svg><strong>Design exclusivo e moderno</strong></div><p>Visual que gera confiança à primeira vista, antes mesmo do cliente ler uma linha.</p></li>
-            </ul>
+        <section id="como-funciona" class="steps-section fade-section" aria-labelledby="steps-title">
+            <div class="section-heading">
+                <span class="eyebrow">COMO FUNCIONA</span>
+                <h2 id="steps-title">Processo simples e eficaz em <span class="destaque">3 passos</span></h2>
+            </div>
+            <ol class="steps-list">
+                <li class="step accent-orange">
+                    <div class="step-card">
+                        <span class="step-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5Z"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="13" y2="14"/></svg></span>
+                        <h3><span>1.</span> Alinhamento</h3>
+                        <p>Você me conta o que seu negócio precisa.</p>
+                    </div>
+                </li>
+                <li class="step accent-purple">
+                    <div class="step-card">
+                        <span class="step-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="2" y1="8" x2="22" y2="8"/><polyline points="9 12 7 14.5 9 17"/><polyline points="15 12 17 14.5 15 17"/></svg></span>
+                        <h3><span>2.</span> Desenvolvimento</h3>
+                        <p>Crio o design e a estrutura de alta conversão.</p>
+                    </div>
+                </li>
+                <li class="step accent-green">
+                    <div class="step-card">
+                        <span class="step-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09Z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2Z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span>
+                        <h3><span>3.</span> Aprovação e Lançamento</h3>
+                        <p>Você valida e colocamos seu site no ar pronto para vender.</p>
+                    </div>
+                </li>
+            </ol>
+            <a href="https://wa.me/11914849538" target="_blank" rel="noopener" class="btn-outline">Solicitar orçamento no WhatsApp</a>
         </section>
 
-        <section class="projects-section fade-section" aria-labelledby="reviews-title">
-            <div class="reviews-heading">
+        <section id="portfolio" class="projects-section fade-section" aria-labelledby="reviews-title">
+            <div class="section-heading">
                 <span class="eyebrow">PROJETOS REAIS</span>
-                <h2 id="reviews-title">Resultado que fala por si</h2>
+                <h2 id="reviews-title">Resultado que <span class="destaque">fala por si</span></h2>
                 <p>Conheça alguns projetos e o que os clientes disseram sobre a experiência.</p>
             </div>
             <div class="reviews-track" aria-label="Projetos e avaliações">
-                <article class="review-card">
-                    <div class="project-preview"><img src="project1.png" alt="Prévia de um projeto desenvolvido pela Basedev"></div>
+                <article class="review-card tilt">
+                    <div class="project-preview">
+                        <div class="frame-bar" aria-hidden="true"><span class="art-dots"><i></i><i></i><i></i></span><span class="frame-url"></span></div>
+                        <img src="project1.png" alt="Prévia de um projeto desenvolvido pela Basedev">
+                    </div>
                     <div class="review-content">
                         <div class="review-stars" aria-label="Avaliação de 5 estrelas">★★★★★</div>
                         <blockquote>“Trabalhar com a Basedev foi uma experiência ótima. Valorizo profissionais com escuta ativa; o Gabriel respeitou meus feedbacks, fez os ajustes que solicitei e entregou algo além do que eu esperava. Super indico o trabalho da empresa!”</blockquote>
-                        <p>Verso Estúdio Criativo</p>
+                        <p class="review-client"><span aria-hidden="true">V</span>Verso Estúdio Criativo</p>
                     </div>
-                    
                 </article>
-               <article class="review-card">
-                    <div class="project-preview"><img src="project2.png" alt="Prévia de um projeto desenvolvido pela Basedev"></div>
+                <article class="review-card tilt">
+                    <div class="project-preview">
+                        <div class="frame-bar" aria-hidden="true"><span class="art-dots"><i></i><i></i><i></i></span><span class="frame-url"></span></div>
+                        <img src="project2.png" alt="Prévia de um projeto desenvolvido pela Basedev">
+                    </div>
                     <div class="review-content">
                         <div class="review-stars" aria-label="Avaliação de 5 estrelas">★★★★★</div>
-                        <p>Zig Empreendimentos</p>
+                        <p class="review-client"><span aria-hidden="true">Z</span>Zig Empreendimentos</p>
                     </div>
-                    
                 </article>
+            </div>
+        </section>
+
+        <section id="faq" class="faq-section fade-section" aria-labelledby="faq-title">
+            <div class="faq-layout">
+                <div class="faq-intro">
+                    <span class="eyebrow">DÚVIDAS FREQUENTES</span>
+                    <h2 id="faq-title">Perguntas <span class="destaque">frequentes</span></h2>
+                    <p>Separei as dúvidas mais comuns de quem está pensando em criar um site.</p>
+                    <div class="faq-help tilt">
+                        <span class="faq-help-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5Z"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="13" y2="14"/></svg></span>
+                        <strong>Ainda tem dúvidas?</strong>
+                        <p>Me chame no WhatsApp que eu te ajudo.</p>
+                        <a href="https://wa.me/11914849538" target="_blank" rel="noopener" class="btn-outline">Falar no WhatsApp</a>
+                    </div>
+                </div>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Quanto tempo leva para meu site ficar pronto?</summary>
+                        <p>Depende do tamanho do projeto. Logo no alinhamento eu te passo um prazo claro, e você acompanha cada etapa até o lançamento.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Quanto custa um site ou landing page?</summary>
+                        <p>Cada projeto é feito sob medida, então o valor varia conforme o que seu negócio precisa. Me chame no WhatsApp e receba uma proposta personalizada.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>O site vai funcionar bem no celular?</summary>
+                        <p>Sim. Todos os sites são responsivos e otimizados para carregar rápido em qualquer dispositivo — celular, tablet ou computador.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Posso pedir ajustes antes do lançamento?</summary>
+                        <p>Claro. Na etapa de aprovação você revisa tudo e eu faço os ajustes necessários para o site ficar do jeito que você espera.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Preciso ter domínio e hospedagem?</summary>
+                        <p>Não precisa se preocupar com a parte técnica. Eu te oriento em tudo para colocar seu site no ar com o seu próprio endereço.</p>
+                    </details>
+                </div>
             </div>
         </section>
 
         <section class="final-cta-section fade-section">
-            <h2>Pronto para levar seu negócio para o <span class="destaque">próximo nível?</span></h2>
-            <p>Entre em contato, conte-me sobre o seu projeto e receba uma proposta personalizada.</p>
-            <a href="https://wa.me/11914849538" target="_blank" rel="noopener" class="btn">Quero Mais Informações</a>
+            <div class="cta-panel">
+                <span class="eyebrow">VAMOS COMEÇAR?</span>
+                <h2>Pronto para levar seu negócio para o <span class="destaque">próximo nível?</span></h2>
+                <p>Entre em contato, conte-me sobre o seu projeto e receba uma proposta personalizada.</p>
+                <ul class="cta-perks">
+                    <li>Projeto sob medida</li>
+                    <li>Proposta personalizada</li>
+                    <li>Atendimento direto pelo WhatsApp</li>
+                </ul>
+                <a href="https://wa.me/11914849538" target="_blank" rel="noopener" class="btn">Quero Mais Informações</a>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="footer-content">
-            <img src="basedev-logo-white-orange-v2.png" alt="Basedev" class="footer-logo">
+            <div class="footer-brand">
+                <img src="basedev-logo-white-orange-v2.png" alt="Basedev" class="footer-logo">
+                <p>Sites e landing pages sob medida, rápidos e focados em conversão.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Rodapé">
+                <a href="#servicos">Serviços</a>
+                <a href="#como-funciona">Como funciona</a>
+                <a href="#portfolio">Portfólio</a>
+                <a href="#faq">FAQ</a>
+            </nav>
             <a href="https://wa.me/11914849538" target="_blank" rel="noopener" class="footer-contact">Falar no WhatsApp <span>→</span></a>
         </div>
         <div class="footer-bottom">
